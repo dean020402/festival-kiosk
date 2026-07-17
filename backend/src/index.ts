@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import paymentRouter from "./routes/order.ts"; // 👈 결제 라우터 파일 경로에 맞게 수정하세요!
+import paymentRouter from "./routes/order"; // 👈 결제 라우터 파일 경로에 맞게 수정하세요!
 
 // .env 파일의 환경변수 로드
 dotenv.config();
@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // 앞서 만든 결제 확인 라우터를 등록합니다.
 // 이렇게 하면 결제 승인 엔드포인트 주소는 http://localhost:3000/confirm 이 됩니다.
-app.use("/api/order", paymentRouter); 
+app.use("/confirm", paymentRouter); 
 
 
 // 기본 헬스체크용 엔드포인트 (서버가 잘 켜졌는지 확인용)
