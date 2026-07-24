@@ -2,8 +2,8 @@ import React, {useState, useEffect } from 'react';
 import {Utensils, Settings, Home} from 'lucide-react';
 
 interface HeaderProps {
-    currentView: 'home'| 'order';
-    setCurrentView: React.Dispatch<React.SetStateAction<'home' | 'order'>>;
+    currentView: 'home'| 'order'|'admin';
+    setCurrentView: (view:'home' | 'order'|'admin') =>void;
 
 }
 
@@ -40,7 +40,7 @@ export default function Header({currentView, setCurrentView}: HeaderProps) {
                 </div>
             </div>
             <div className="flex items-center spave-x-4 text-sm text-gray-600">
-                {currentView === 'order' && (
+                {currentView === 'home' && (
                     <button onClick={()=> setCurrentView('home')} 
                     className="flex items-center gap-1 hover:text-black font-medium cursor-pointer">
                         <Home size={16 }/> 처음으로

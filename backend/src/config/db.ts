@@ -10,7 +10,7 @@ const pool = new Pool(
               user: process.env.DB_USER || "postgres",
               host: process.env.DB_HOST || "localhost",
               database: process.env.DB_DATABASE || "postgres",
-              password: String(process.env.DB_PASSWORD || ""), // 👈 강제로 문자열(string)로 바꾸는 안전장치!
+              password: String(process.env.DB_PASSWORD || "1234"), // 👈 강제로 문자열(string)로 바꾸는 안전장치!
               port: Number(process.env.DB_PORT) || 5432,
           }
 );

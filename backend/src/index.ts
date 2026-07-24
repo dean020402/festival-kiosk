@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import paymentRouter from "./routes/order.ts"; // 👈 결제 라우터 파일 경로에 맞게 수정하세요!
-
+import paymentRouter from "./routes/order"; // 👈 결제 라우터 파일 경로에 맞게 수정하세요!
+import adminRouter from "./routes/adminRoutes";
 // .env 파일의 환경변수 로드
 dotenv.config();
 
@@ -19,6 +19,8 @@ app.use(cors({
     credentials: true
 }));
 
+
+
 // ⭐️ 가장 중요! 포스트맨이나 프론트에서 보낸 JSON 바디를 읽을 수 있게 해줍니다.
 app.use(express.json()); 
 
@@ -34,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 // 이렇게 하면 결제 승인 엔드포인트 주소는 http://localhost:3000/confirm 이 됩니다.
 app.use("/api/order", paymentRouter); 
 
-
+app.use("/api/admin",adminRouter)
 // 기본 헬스체크용 엔드포인트 (서버가 잘 켜졌는지 확인용)
 app.get("/", (req, res) => {
     res.send("Festival Kiosk Backend Server is Running!");
