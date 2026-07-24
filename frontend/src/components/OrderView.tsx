@@ -127,13 +127,13 @@ export default function OrderView() {
         </div>
       </div>
 
-      <footer className="bg-white border-t border-gray-200 py-3 px-8 flex justify-center gap-16">
+      <footer className="bg-white border-t border-gray-200 py-25 px-10 flex justify-center gap-16">
         <button className="flex flex-col items-center text-black font-bold text-xs gap-1 cursor-pointer">
-          <UtensilsCrossed size={20} />
+          <UtensilsCrossed size={30} />
           <span>주문하기</span>
         </button>
         <button className="flex flex-col items-center text-gray-400 text-xs gap-1 hover:text-gray-600 cursor-pointer">
-          <Calendar size={20} />
+          <Calendar size={30} />
           <span>사전예약</span>
         </button>
       </footer>

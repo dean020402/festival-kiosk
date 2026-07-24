@@ -8,17 +8,19 @@
   "dependencies": {
     "axios": "^1.18.1",
     "cors": "^2.8.6",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "jsonwebtoken": "^9.0.3",
     "pg": "^8.22.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
-    "@types/express": "^4.17.21",
+    "@types/express": "^4.17.25",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20.19.43",
     "@types/pg": "^8.11.5",
     "ts-node-dev": "^2.0.0",
     "tsx": "^4.23.1",
-    "typescript": "^5.4.5"
+    "typescript": "^5.9.3"
   }
 }
